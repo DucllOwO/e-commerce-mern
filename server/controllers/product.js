@@ -3,6 +3,9 @@ const Product = require("../models/Product");
 const createProduct = async (req, res) => {
   const newProduct = new Product(req.body);
 
+  const buffer = await sharp(req.file.buffer).resize({ width: 250, height: 250 }).png().toBuffer();
+  newProduct.img = buffer;
+  
   try {
     const savedProduct = await newProduct.save();
     res.status(200).json(savedProduct);

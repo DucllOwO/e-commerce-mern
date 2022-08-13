@@ -1,4 +1,3 @@
-
 const {
   verifyTokenAndAdmin,
 } = require("./verifyToken");
@@ -9,11 +8,12 @@ const {
   getProduct,
   getAllProducts
 } = require('../controllers/product.js')
+const { uploadImage } = require('../middleware/uploadImage')
 
 const router = require("express").Router();
 
 //CREATE
-router.post("/", verifyTokenAndAdmin, createProduct);
+router.post("/", verifyTokenAndAdmin, uploadImage.single('img') ,createProduct);
 
 //UPDATE
 router.put("/:id", verifyTokenAndAdmin, updateProduct);
