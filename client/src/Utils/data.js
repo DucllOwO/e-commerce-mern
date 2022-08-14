@@ -27,17 +27,21 @@ export const sliderItems = [
       id: 1,
       img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "SHIRT STYLE!",
+      category: 'shirt'
     },
     {
       id: 2,
       img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "LOUNGE WEAR LOVE",
+      category: 'lounge'
     },
     {
       id: 3,
       img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       title: "LIGHT JACKETS",
+      category: 'jacket'
     },
+    
   ];
 
   export const popularProducts = [
@@ -72,5 +76,45 @@ export const sliderItems = [
     {
       id:8,
       img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+    },
+    {
+      id:9,
+      img:"https://www.pngarts.com/files/1/Women-Leather-Jacket-PNG-Pic.png",
+    },
+    {
+      id:10,
+      img:"https://www.pngarts.com/files/9/Black-Hoodie-Front-PNG-Free-Picture.png",
+    },
+    {
+      id:11,
+      img:"https://www.pngarts.com/files/3/Brown-Leather-Backpack-PNG-Image.png",
+    },
+    {
+      id:12,
+      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+    },
+    {
+      id:13,
+      img:"https://www.pngarts.com/files/2/Shoes-PNG-Background-Image.png",
+    },
+    {
+      id:14,
+      img:"https://www.pngarts.com/files/2/Gucci-Shoes-For-Women-Transparent-Images.png",
+    },
+    {
+      id:15,
+      img:"https://www.pngarts.com/files/1/T-Shirt-PNG-Transparent-Image.png",
+    },
+    {
+      id:16,
+      img:"https://www.pngarts.com/files/1/Pant-Transparent-Image.png",
+    },
+    {
+      id:17,
+      img:"https://www.pngarts.com/files/1/Pant-PNG-Transparent-Image.png",
+    },
+    {
+      id:18,
+      img:"https://www.pngarts.com/files/3/Women-T-Shirt-Transparent-Image.png",
     },
   ]
