@@ -2,7 +2,9 @@ import { Button as ButtonMUI } from '@mui/material';
 import { styled as styledUI } from "@mui/material/styles";
 import styled from 'styled-components';
 
-export const Button =  styledUI(ButtonMUI)`
+
+
+export const Button = styledUI(ButtonMUI)`
   size: medium;
   border: 2px solid #1976d2;
   font-size: larger;
