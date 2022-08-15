@@ -1,6 +1,5 @@
-import { Button } from '../../../Utils/styles/styles';
+import { Button, LinkRouter } from '../../../Utils/styles/styles';
 import { Container, Image, Info, Title } from './styles'
-import { Link } from 'react-router-dom';
 
 const CategoryItem = ({ item }) => {
   return (
@@ -8,9 +7,9 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Link to={`/products/${item.category}`} style={{ textDecoration: 'none'}}>
+        <LinkRouter to={`/products/${item.category}`}>
           <Button variant='outlined'>SHOP NOW</Button>
-        </Link>
+        </LinkRouter>
       </Info>
     </Container>
   );

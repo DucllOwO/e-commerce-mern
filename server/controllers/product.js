@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const Product = require("../models/Product");
 
 const createProduct = async (req, res) => {

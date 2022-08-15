@@ -1,30 +1,57 @@
 import { Add, Remove } from "@mui/icons-material";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import api from "../../api/api";
 import {
-  Container, Wrapper, ImgContainer, InfoContainer,
-  Title, Desc, Price, Filter, FilterColor, FilterContainer,
-  FilterTitle, FilterSize, Image, FilterSizeOption, AddContainer,
-  AmountContainer, Amount, Button
-} from './styles'
+  Container,
+  Wrapper,
+  ImgContainer,
+  InfoContainer,
+  Title,
+  Desc,
+  Price,
+  Filter,
+  FilterColor,
+  FilterContainer,
+  FilterTitle,
+  FilterSize,
+  Image,
+  FilterSizeOption,
+  AddContainer,
+  AmountContainer,
+  Amount,
+  Button,
+} from "./styles";
 
-
+const size = ["XS", "S", "M", "L", "XL"];
 
 const Product = () => {
+  const [product, setProduct] = useState({});
+  const location = useLocation();
+  //example: http://localhost:3000/product/62f9b9ce67bca50dee2d786d
+  const productID = location.pathname.split("/")[2];
+  console.log(productID)
+  useEffect(() => {
+    try {
+      const getProduct = async () => {
+        const product = await api.get(`/products/find/${productID}`);
+        setProduct(product.data);
+      };
+      getProduct();
+    } catch (error) {
+      console.log(error.message);
+    }
+  }, []);
   return (
     <Container>
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src={product.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
-          </Desc>
-          <Price>$ 20</Price>
+          <Title>{product.title}</Title>
+          <Desc>{product.desc}</Desc>
+          <Price>{`$ ${product.price}`}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
@@ -35,11 +62,13 @@ const Product = () => {
             <Filter>
               <FilterTitle>Size</FilterTitle>
               <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
+                {/* {product.size.map((siz) =>
+                  size.includes(siz) ? (
+                    <FilterSizeOption>{siz}</FilterSizeOption>
+                  ) : (
+                    <FilterSizeOption disabled>{siz}</FilterSizeOption>
+                  )
+                )} */}
               </FilterSize>
             </Filter>
           </FilterContainer>

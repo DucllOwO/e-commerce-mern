@@ -3,7 +3,8 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@mui/icons-material";
-import { Container, Circle, Info, Icon, Image } from './styles'
+import { Container, Circle, Info, Icon, Image } from "./styles";
+import { LinkRouter } from "../../../Utils/styles/styles";
 
 const Product = ({ item }) => {
   return (
@@ -15,7 +16,9 @@ const Product = ({ item }) => {
           <ShoppingCartOutlined />
         </Icon>
         <Icon>
-          <SearchOutlined />
+          <LinkRouter to={`/product/${item._id}`}>
+            <SearchOutlined />
+          </LinkRouter>
         </Icon>
         <Icon>
           <FavoriteBorderOutlined />

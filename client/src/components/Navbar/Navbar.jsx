@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlined from '@mui/icons-material/ShoppingCartOutlined';
 import { IconButton } from '@mui/material';
+import { LinkRouter } from '../../Utils/styles/styles.jsx';
 
 const Navbar = () => {
   return (
@@ -20,7 +21,9 @@ const Navbar = () => {
             </Search>
           </LeftContainer>
           <CenterContainer>
-            <Logo> DUCK </Logo>
+            <LinkRouter to='/'>
+              <Logo> DUCK </Logo>
+            </LinkRouter>
           </CenterContainer>
           <RightContainer>
             <Badge badgeContent={4} color='primary'>

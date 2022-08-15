@@ -24,11 +24,12 @@ const App = () => {
         <Navbar />
         <Routes>
             <Route exact path='/' element={<Home />} />
-            <Route exact path='/product/:id' element={<Product />} />
-            <Route exact path='/products/:category' element={<Products />} />
-            <Route exact path='/login' element={user ? <Navigate to='/'/> : <Login />} />
-            <Route exact path='/register' element={user ? <Navigate to='/' /> : <Register />}/>
-            <Route exact path='/cart' element={<Cart />} />
+            <Route  path='/product/:id' element={<Product />} />
+            <Route  path='/products/:category' element={<Products />} />
+            <Route  path='/products/all' element={<Products />} />
+            <Route  path='/login' element={user ? <Navigate to='/'/> : <Login />} />
+            <Route  path='/register' element={user ? <Navigate to='/' /> : <Register />}/>
+            <Route  path='/cart' element={<Cart />} />
         </Routes>
         <Footer />
       </ContainerSVG>

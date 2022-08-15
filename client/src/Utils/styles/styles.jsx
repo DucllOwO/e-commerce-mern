@@ -1,8 +1,13 @@
 import { Button as ButtonMUI } from '@mui/material';
 import { styled as styledUI } from "@mui/material/styles";
+import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 
 
+export const LinkRouter = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 export const Button = styledUI(ButtonMUI)`
   size: medium;

@@ -57,7 +57,7 @@ const popularProducts = [
       title: 'Colorful shirt',
       desc:'She nervously peered over the edge. She understood in her mind that the view was supposed to be beautiful, but all she felt was fear. There had always been something about heights that disturbed her, and now she could feel the full force of this unease.',
       categories: ['shirt'],
-      size:['S', 'M', 'L', 'XL'],
+      size:['S', 'M', 'XL'],
       price:68,
       img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
     },
