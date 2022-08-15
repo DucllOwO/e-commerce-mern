@@ -1,7 +1,7 @@
 const {
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
-} = require("./verifyToken");
+} = require("../middleware/verifyToken");
 const {
   updateUser,
   deleteUser,

@@ -1,5 +1,6 @@
 import { Button } from '../../../Utils/styles/styles';
 import { Container, Image, Info, Title } from './styles'
+import { Link } from 'react-router-dom';
 
 const CategoryItem = ({ item }) => {
   return (
@@ -7,7 +8,9 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button variant='outlined'>SHOP NOW</Button>
+        <Link to={`/products/${item.category}`} style={{ textDecoration: 'none'}}>
+          <Button variant='outlined'>SHOP NOW</Button>
+        </Link>
       </Info>
     </Container>
   );
