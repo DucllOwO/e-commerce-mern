@@ -15,6 +15,7 @@ const Title = styled.h1`
 `;
 
 const Home = () => {
+
   return (
     <ContainerSVG>
       <Slider />

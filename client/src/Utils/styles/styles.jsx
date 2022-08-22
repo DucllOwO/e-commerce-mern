@@ -1,6 +1,6 @@
-import { Button as ButtonMUI } from '@mui/material';
+import { Button as ButtonMUI, TextField } from '@mui/material';
 import { styled as styledUI } from "@mui/material/styles";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -9,12 +9,23 @@ export const LinkRouter = styled(Link)`
   color: inherit;
 `;
 
+export const TextButton = styledUI(ButtonMUI)`
+  font-size: medium;
+  font-weight: 500;
+`;
+
 export const Button = styledUI(ButtonMUI)`
   size: medium;
-  border: 2px solid #1976d2;
+  border: 2px solid inherit;
   font-size: larger;
   font-weight: 600;
   margin-top: 50px;
+`;
+
+export const Input = styledUI(TextField)`
+  min-width: 40%;
+  margin: 10px;
+  variant: outlined;
 `;
 
 export const ContainerSVG = styled.div`

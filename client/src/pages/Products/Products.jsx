@@ -11,7 +11,7 @@ import {
   Option,
 } from "./styles";
 
-const Products = () => {
+const Products = ({ all }) => {
   const location = useLocation();
   const category = location.pathname.split("/")[2];
   const [filter, setFilter] = useState({});

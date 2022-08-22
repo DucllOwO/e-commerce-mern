@@ -4,12 +4,7 @@ import { mobile } from "../../Utils/styles/responsive";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
+  background: center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -52,4 +47,9 @@ export const Button = styled.button`
   background-color: teal;
   color: white;
   cursor: pointer;
+`;
+
+export const Error = styled.h5`
+  color: red;
+  margin: 10px;
 `;

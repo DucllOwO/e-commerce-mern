@@ -1,5 +1,6 @@
 import { Button, LinkRouter } from '../../../Utils/styles/styles';
 import { Container, Image, Info, Title } from './styles'
+import { PRODUCT_CATEGORY_ROUTE } from '../../../Utils/constant'
 
 const CategoryItem = ({ item }) => {
   return (
@@ -7,7 +8,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <LinkRouter to={`/products/${item.category}`}>
+        <LinkRouter to={`${PRODUCT_CATEGORY_ROUTE}${item.category}`}>
           <Button variant='outlined'>SHOP NOW</Button>
         </LinkRouter>
       </Info>

@@ -45,12 +45,13 @@ export default Slider;
 
 
 
-
+// Carousel
 
 // import React, { useState } from 'react';
-// import { Container, MobileStepperCustom, Image } from './styles';
+// import { Container, Image } from './styles';
 // import SwipeableViews from 'react-swipeable-views';
 // import { autoPlay, bindKeyboard } from 'react-swipeable-views-utils';
+// import { sliderItems } from "../../Utils/data";
 
 // const itemData = [
 //   {
@@ -78,8 +79,6 @@ export default Slider;
 // const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 // const SwipeableViewsCustom = bindKeyboard(AutoPlaySwipeableViews);
 
-// // Quilted image lists emphasize certain items over others in a collection. They create hierarchy using varied container sizes and ratios.
-
 // const Slider = () => {
 //   const [index, setIndex] = useState(0);
 
@@ -87,15 +86,13 @@ export default Slider;
 //     setIndex(i);
 //   };
 
-//   const items = itemData.map((image) => <Image src={image.img} alt={image.title}/>
-//   )
+//   const items = itemData.map((image) => <Image src={image.img} alt={image.title}/>)
   
 //   return (
 //     <Container>
 //       <SwipeableViewsCustom index={index} onChangeIndex={handleChangeIndex}>
 //         {items}
 //       </SwipeableViewsCustom>
-//       <MobileStepperCustom variant='dots' steps={4} activeStep={index} />
 //     </Container>
 //   );
 // }

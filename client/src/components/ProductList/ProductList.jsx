@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Stack } from "@mui/material";
 import styled from "styled-components";
 import Product from "./Product/Product";
-import api from "../../api/api";
+import { publicRequest } from "../../api/api";
 
 const Container = styled.div`
   padding: 20px;
@@ -18,11 +18,11 @@ const ProductList = ({ category, filter, sort }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await api.get(
-          category ? `/products?category=${category}` : "/products/"
+        const res = await publicRequest.get(
+          category !== "all" && category ? `/products?category=${category}` : "/products/"
         );
-        setProducts(res.data);
         console.log(res);
+        setProducts(res.data)
       } catch (e) {
         console.log(e);
       }
@@ -44,9 +44,13 @@ const ProductList = ({ category, filter, sort }) => {
   useEffect(() => {
     switch (sort) {
       case "newest":
-        setProductsFilter((curValue) => {
-          return [...curValue].sort((a, b) => a.createdAt - b.createdAt);
-        });
+        setProductsFilter((curValue) =>
+          [...curValue].sort((a, b) => {
+            const aDate = new Date(a.createdAt);
+            const bDate = new Date(b.createdAt);
+            return bDate - aDate;
+          })
+        );
         break;
       case "price_asc":
         setProductsFilter((curValue) => {

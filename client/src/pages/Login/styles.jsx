@@ -1,15 +1,10 @@
 import styled from "styled-components";
-import {mobile} from "../../Utils/styles/responsive";
+import { mobile } from "../../Utils/styles/responsive";
 
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
+  background: center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -33,12 +28,6 @@ export const Form = styled.form`
   flex-direction: column;
 `;
 
-export const Input = styled.input`
-  flex: 1;
-  min-width: 40%;
-  margin: 10px 0;
-  padding: 10px;
-`;
 
 export const Button = styled.button`
   width: 40%;
@@ -48,11 +37,10 @@ export const Button = styled.button`
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  align-self: center;
 `;
 
-export const Link = styled.a`
-  margin: 5px 0px;
-  font-size: 12px;
-  text-decoration: underline;
-  cursor: pointer;
-`;
+export const Error = styled.h5`
+  color: red;
+  margin: 10px;
+`

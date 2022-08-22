@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { mobile } from "../../Utils/styles/responsive";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  background-color: whitesmoke;
+`;
 
 export const Wrapper = styled.div`
   padding: 20px;

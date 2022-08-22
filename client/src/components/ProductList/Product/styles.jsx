@@ -13,6 +13,7 @@ export const Info = styled.div`
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
+  border: 1px solid black;
   cursor: pointer;
 `;
 
@@ -27,9 +28,10 @@ export const Container = styled.div`
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
+  border: 1px solid black;
   border-radius: 10px;
 
-  &:hover ${Info}{
+  &:hover ${Info} {
     opacity: 1;
   }
 `;
