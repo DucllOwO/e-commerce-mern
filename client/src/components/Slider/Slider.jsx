@@ -29,7 +29,6 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button variant="contained">SHOW NOW</Button>
             </InfoContainer>
           </Slide>
         ))}

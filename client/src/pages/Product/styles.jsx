@@ -6,8 +6,9 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  padding: 50px;
+  padding: 10px;
   display: flex;
+  flex-direction: ${(props) => props.column ? 'column' : 'row'};
   ${mobile({ padding: "10px", flexDirection:"column" })}
 `;
 

@@ -47,6 +47,12 @@ export const Circle = styled.div`
 export const Image = styled.img`
   height: 75%;
   z-index: 2;
+  -drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 `;
 
 export const Icon = styled.div`

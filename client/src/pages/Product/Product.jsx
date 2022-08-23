@@ -18,31 +18,12 @@ import {
   AddContainer,
   Button,
 } from "./styles";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/cartRedux";
-import ViewedProducts from "../../components/ViewedProducts/ViewedProducts";
-import { useSelector } from "react-redux";
 import { default as ProductCarousel } from "../../components/ProductList/Product/Product";
 import AliceCarousel from "react-alice-carousel";
-import { Stack } from "@mui/material";
+import { Typography } from "@mui/material";
 import "react-alice-carousel/lib/alice-carousel.css";
-const items = [
-  <div className="item" data-value="1">
-    1
-  </div>,
-  <div className="item" data-value="2">
-    2
-  </div>,
-  <div className="item" data-value="3">
-    3
-  </div>,
-  <div className="item" data-value="4">
-    4
-  </div>,
-  <div className="item" data-value="5">
-    5
-  </div>,
-];
 
 
 const Product = () => {
@@ -82,8 +63,9 @@ const Product = () => {
 
   const responsive = {
     0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 },
+    70: { items: 2 },
+    140: { items: 3 },
+    210: { items: 4 },
   };
 
   return (
@@ -115,18 +97,28 @@ const Product = () => {
           </AddContainer>
         </InfoContainer>
       </Wrapper>
-      <div>
+      <Wrapper column>
+        <Typography variant="h4" gutterBottom>
+          Products you viewed
+        </Typography>
         <AliceCarousel
           responsive={responsive}
+          keyboardNavigation
+          mouseTracking
+          disableDotsControls
+          disableButtonsControls
+          controlsStrategy="alternate"
           items={viewedProduct.map((product) => {
             return (
-                  <ProductCarousel item={product} key={product._id} />
-
+              <ProductCarousel
+                item={product}
+                key={product._id}
+                style={{ margin: "10px" }}
+              />
             );
           })}
         />
-      </div>
-      <Wrapper></Wrapper>
+      </Wrapper>
     </Container>
   );
 };
